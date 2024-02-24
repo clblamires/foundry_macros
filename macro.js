@@ -8,5 +8,5 @@ const messages = [
 ];
 const m = Math.floor( Math.random() * messages.length );
 ChatMessage.create({
- content: "MACRO TEST / " + messages[m]
+ content: messages[m]
 });
