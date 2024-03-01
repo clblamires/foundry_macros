@@ -1,3 +1,5 @@
+// to add new one-liners, simply add new lines here
+// use " " quotes to wrap the line, and add a comma at the end
 const messages = [
   "I AM THE ALPHA NOW!",
   "Don't worry! Crying is a free action.",
