@@ -1,15 +1,8 @@
 let ready = false;
-let users = game.users//.filter( user => user.active );
-let ops = ""; // default none
-let playerTokenIDs = users.map( u => u.character?.id).filter( id => id !== undefined ); // get user token IDs, but only for characters on the screen
-let selectedPlayerIDs = canvas.tokens.controlled.map( token => {
-  if( playerTokenIDs.includes(token.actor.id)){
-    return token.actor.id;
-  }
-})
-
+let users = game.users;
+let options = "";
 users.forEach( u => {
-  ops += `
+  options += `
       <br>
       <input type="checkbox" name="${u.id}" id="${u.id}" value="${u.name}">\n
       <label for="${u.id}">${u.name}</label>
@@ -19,7 +12,7 @@ users.forEach( u => {
 new Dialog({
   title: "Whisper to Other Players",
   content: `
-    Whisper To: ${ops} <br>
+    Whisper To: ${options} <br>
     <label for="message">What do you want to whisper?</label>
     <textarea id="message" name="message" rows="5" cols="50"></textarea><br>
   `,
@@ -27,8 +20,10 @@ new Dialog({
     whisper: {
       label: "Whisper",
       callback: (msg) => sendMessage(msg)
+    },
+    cancel: {
+      label: "Cancel"  
     }
-  }
 }).render( true );
 
 function sendMessage( msg ){
