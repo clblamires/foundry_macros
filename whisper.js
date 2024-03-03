@@ -14,7 +14,8 @@ new Dialog({
   content: `
     Whisper To: ${options} <br>
     <label for="message">What do you want to whisper?</label>
-    <textarea id="message" name="message" rows="5" cols="50"></textarea><br>
+    <textarea id="message" name="message" rows="5" cols="50" style=
+"background-color:white!important;"></textarea><br>
   `,
   buttons: {
     whisper: {
@@ -24,6 +25,7 @@ new Dialog({
     cancel: {
       label: "Cancel"  
     }
+}
 }).render( true );
 
 function sendMessage( msg ){
