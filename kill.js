@@ -11,12 +11,6 @@ const kills = [
 	"Killamity",
 	"Killadelic"
 ];
-
 // get a random kill from the list and send it in chat
 const k = Math.floor( Math.random() * kills.length );
-ChatMessage.create({
-    content: "<h2>" + kills[k] + "</h2>";
-});
-
-// optional try to make a notification too?
-ui.notifications.info("<h2>" + kills[k] + "</h2>");
+ui.notifications.error("<h1 style='font-size: 400%;font-weight: bold; text-align:center;'>" + kills[k] + "</h1>");
