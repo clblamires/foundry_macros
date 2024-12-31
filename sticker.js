@@ -27,12 +27,12 @@
       return '<p style="text-align: center; font-style: italic;">No stickers found.</p>';
     }
 
-    let content = '<div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px;">';
+    let content = '<div style="display: grid; grid-template-columns: repeat(8, 1fr); gap: 10px;">';
     stickers.forEach(({ url, title }) => {
       let fullUrl = sticker_url + url;
       content += `<div style="text-align: center;">
                     <img src="${fullUrl}" style="max-width: 100%; height: auto; cursor: pointer;" onclick="sendToChat('${fullUrl}')" />
-                    <div style="font-size: 0.9em; margin-top: 5px;">${title}</div>
+                    <div style="font-size: 0.75em; margin-top: 5px;">${title}</div>
                   </div>`;
     });
     content += "</div>";
