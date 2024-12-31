@@ -1,5 +1,5 @@
 (() => {
-  const jsonUrl = "https://raw.githubusercontent.com/your-username/your-repo/main/stickers.json";
+  const jsonUrl = "https://raw.githubusercontent.com/clblamires/foundry_macros/refs/heads/main/sticker_list.json";
 
   let allStickers = [];
   let dialog;
@@ -30,7 +30,7 @@
 
   // show grid of stickers
   function createGrid(stickers) {
-    const sticker_url = "https://raw.githubusercontent.com/clblamires/foundry_macros/refs/heads/main/stickers/";
+    const sticker_url = "https://clblamires.github.io/foundry_macros/stickers/";
     if (stickers.length === 0) {
       return '<p style="text-align: center; font-style: italic;">No stickers found.</p>';
     }
