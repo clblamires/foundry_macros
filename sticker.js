@@ -19,14 +19,6 @@
     }
   }
 
-  // create the search bar at the top
-  function createSearchBar() {
-    return `
-      <div style="margin-bottom: 10px;">
-        <input id="sticker-search" type="text" placeholder="Search stickers..." 
-          style="width: 100%; padding: 5px; font-size: 1em;"/>
-      </div>`;
-  }
 
   // show grid of stickers
   function createGrid(stickers) {
@@ -47,26 +39,6 @@
     return content;
   }
 
-  // filter system
-  function filterStickers(query) {
-    query = query.toLowerCase();
-    return allStickers.filter(({ title, tags }) => {
-      return (
-        title.toLowerCase().includes(query) ||
-        tags.some((tag) => tag.toLowerCase().includes(query))
-      );
-    });
-  }
-
-  // search event handler (i.e. when the user types in something)
-  function handleSearch(event) {
-    const query = event.target.value;
-    const filteredStickers = filterStickers(query);
-    const content = createSearchBar() + createGrid(filteredStickers);
-    dialog.data.content = content;
-    dialog.render(true);
-  }
-
   // send the sticker to chat
   window.sendToChat = function (imageUrl) {
     const content = `<img src="${imageUrl}" style="max-width: 100px; height: auto;" />`;
@@ -80,8 +52,7 @@
 
   // render the dialog box
   function renderDialog(stickers) {
-    const content = createSearchBar() + createGrid(stickers);
-
+    const content = createGrid(stickers);
     dialog = new Dialog({
       title: "Emotes",
       content: content,
@@ -96,9 +67,6 @@
           width: "800px",
           height: "600px",
         });
-
-        // Add search input listener
-        html.find("#sticker-search").on("input", handleSearch);
       },
     });
 
