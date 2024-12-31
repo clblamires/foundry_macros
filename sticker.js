@@ -1,11 +1,10 @@
 (() => {
-  // URL of your JSON file hosted on GitHub
   const jsonUrl = "https://raw.githubusercontent.com/your-username/your-repo/main/stickers.json";
 
-  let allStickers = []; // Will hold all stickers after fetching from JSON
+  let allStickers = [];
   let dialog;
 
-  // Fetch the stickers JSON and render the dialog
+  // fetch stickers, render the dialog
   async function loadStickers() {
     try {
       const response = await fetch(jsonUrl);
@@ -13,14 +12,14 @@
       
       const data = await response.json();
       allStickers = data.stickers;
-      renderDialog(allStickers); // Render dialog with all stickers initially
+      renderDialog(allStickers);
     } catch (error) {
       console.error(error);
-      ui.notifications.error("Failed to load stickers. Check the console for details.");
+      ui.notifications.error("Stickers didn't load. Check the console, and let Leef know!");
     }
   }
 
-  // Create the search bar
+  // create the search bar at the top
   function createSearchBar() {
     return `
       <div style="margin-bottom: 10px;">
@@ -29,7 +28,7 @@
       </div>`;
   }
 
-  // Create the grid of stickers
+  // show grid of stickers
   function createGrid(stickers) {
     const sticker_url = "https://raw.githubusercontent.com/clblamires/foundry_macros/refs/heads/main/stickers/";
     if (stickers.length === 0) {
@@ -48,7 +47,7 @@
     return content;
   }
 
-  // Filter stickers based on search query
+  // filter system
   function filterStickers(query) {
     query = query.toLowerCase();
     return allStickers.filter(({ title, tags }) => {
@@ -59,7 +58,7 @@
     });
   }
 
-  // Handle search input changes
+  // search event handler (i.e. when the user types in something)
   function handleSearch(event) {
     const query = event.target.value;
     const filteredStickers = filterStickers(query);
@@ -68,7 +67,7 @@
     dialog.render(true);
   }
 
-  // Send the selected image to chat
+  // send the sticker to chat
   window.sendToChat = function (imageUrl) {
     const content = `<img src="${imageUrl}" style="max-width: 100px; height: auto;" />`;
     ChatMessage.create({
@@ -79,7 +78,7 @@
     if (dialog) dialog.close();
   };
 
-  // Render the dialog box
+  // render the dialog box
   function renderDialog(stickers) {
     const content = createSearchBar() + createGrid(stickers);
 
@@ -106,6 +105,6 @@
     dialog.render(true);
   }
 
-  // Load stickers and show dialog
+  // load all stickers! :)
   loadStickers();
 })();
