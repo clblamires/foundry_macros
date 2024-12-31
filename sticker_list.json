@@ -1,14 +1,44 @@
 {
   "stickers": [
     {
-      "url": "https://raw.githubusercontent.com/clblamires/foundry_macros/83167a99a8cd230257e38b90519728b693c4a969/stickers/Celebrate.PNG",
-      "title": "Celebrate!"
+      "url": "https://raw.githubusercontent.com/clblamires/foundry_macros/refs/heads/main/stickers/Celebrate.PNG",
+      "title": "Celebrate",
+      "tags": ["leef", "celebrate", "celebration", "confetti"]
     },
-    { "url": "https://i.imgur.com/OgcqMUM.png", "title": "Waving" },
-    { "url": "https://i.imgur.com/QAdz7hB.png", "title": "Fireball!" },
-    { "url": "https://i.imgur.com/Cxzl7fY.png", "title": "Thumbs Up" },
-    { "url": "https://i.imgur.com/mxLpiUC.png", "title": "Happy Dance" },
-    { "url": "https://i.imgur.com/ioefsge.png", "title": "Surprised" },
-    { "url": "https://i.imgur.com/gq24K1R.png", "title": "Sad" }
+    {
+      "url": "https://raw.githubusercontent.com/clblamires/foundry_macros/refs/heads/main/stickers/Huh.PNG",
+      "title": "Huh?",
+      "tags": ["dm", "dungeon", "master", "huh", "?", "question"]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/clblamires/foundry_macros/refs/heads/main/stickers/Loading.PNG",
+      "title": "Loading...",
+      "tags": ["briar", "loading", "confused", "huh"]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/clblamires/foundry_macros/refs/heads/main/stickers/Nyaaa.PNG",
+      "title": "Nyaaaaa!",
+      "tags": ["torag", "nyaaa", "haha", "silly", "tongue"]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/clblamires/foundry_macros/refs/heads/main/stickers/Shout.PNG",
+      "title": "Shout",
+      "tags": ["clio", "shout", "shouting", "yell", "haha"]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/clblamires/foundry_macros/refs/heads/main/stickers/Stealth.PNG",
+      "title": "Stealth",
+      "tags": ["stealth", "shadow", "cat", "hide", "hiding", "sneak"]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/clblamires/foundry_macros/refs/heads/main/stickers/Umm.PNG",
+      "title": "Umm...",
+      "tags": ["actaeon", "umm", "huh", "what", "haha"]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/clblamires/foundry_macros/refs/heads/main/stickers/Wink.PNG",
+      "title": "Wink",
+      "tags": ["wink", "rendu", "pretty", "cute"]
+    }
   ]
 }

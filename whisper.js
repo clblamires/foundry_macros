@@ -10,7 +10,7 @@ users.forEach( u => {
 })
 
 new Dialog({
-  title: "Whisper to Other Players",
+  title: "What do you want to whisper?",
   content: `
     Whisper To: ${options} <br>
     <label for="message">What do you want to whisper?</label>
