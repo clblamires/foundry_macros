@@ -1,0 +1,14 @@
+{
+  "stickers": [
+    {
+      "url": "https://raw.githubusercontent.com/clblamires/foundry_macros/83167a99a8cd230257e38b90519728b693c4a969/stickers/Celebrate.PNG",
+      "title": "Celebrate!"
+    },
+    { "url": "https://i.imgur.com/OgcqMUM.png", "title": "Waving" },
+    { "url": "https://i.imgur.com/QAdz7hB.png", "title": "Fireball!" },
+    { "url": "https://i.imgur.com/Cxzl7fY.png", "title": "Thumbs Up" },
+    { "url": "https://i.imgur.com/mxLpiUC.png", "title": "Happy Dance" },
+    { "url": "https://i.imgur.com/ioefsge.png", "title": "Surprised" },
+    { "url": "https://i.imgur.com/gq24K1R.png", "title": "Sad" }
+  ]
+}
